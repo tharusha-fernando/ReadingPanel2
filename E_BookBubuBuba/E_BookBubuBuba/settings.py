@@ -130,10 +130,10 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ],
-   ## 'DEFAULT_AUTHENTICATION_CLASSES': (
-        ##...
-    ##    ##'rest_framework_simplejwt.authentication.JWTAuthentication',
-  ##  )
+   'DEFAULT_AUTHENTICATION_CLASSES': (
+       ## ...
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+   )
 }
 
 # Custom user model
@@ -162,11 +162,12 @@ SIMPLE_JWT = {
 }
 
 CORS_ORIGIN_WHITELIST = (
-    'google.com',
-    'hostname.example.com',
-    'localhost:8000',
-    '127.0.0.1:9000'
+    'http://google.com',
+    'http://hostname.example.com',
+    'http://localhost:3000',
+    'http://127.0.0.1:8000',
 )
+
 
 
 
